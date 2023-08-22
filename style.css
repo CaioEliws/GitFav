@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Roboto', sans-serif;
+
+    --text-color: white;
+
+    --fc-button: hsla(191, 91%, 25%);
+    --fc-backgroundInput: hsla(194, 65%, 7%);
+    --fc-table: hsla(194, 72%, 13%);
+    --fc-even: #06181C;
+    --fc-odd: rgba(6, 22, 27, 0.50);
+
+
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: black;
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    padding: 2rem;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 10rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 3.78rem;
+}
+
+.search input {
+    font-size: 1.5rem;
+
+    background-color: var(--fc-backgroundInput);
+    color: var(--text-color);
+    padding: 1.6rem;
+    width: 50rem;
+
+    border: none;
+    border-radius: .5rem;
+}
+
+.search button {
+    width: 17rem;
+    height: 5rem;
+
+    text-transform: uppercase;
+    cursor: pointer;
+
+    margin-left: .6rem;
+
+    text-align: center;
+    background-color: var(--fc-button);
+    color: var(--text-color);
+
+    border: none;
+    border-radius: .5rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.search button:hover {
+    background-color: white;
+    color: var(--fc-button);
+    filter: brightness(1.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    border-radius:  1.5rem; 
+    /* MUDAR PARA SEM BORDER RADIUS AQUI QUANDO NÃO TIVER NADA NOS FAVORITOS */
+    overflow: hidden;
+}
+
+table th {
+    background-color: var(--fc-table);
+    text-align: left;
+    font-weight: 700;
+    padding: 1.6rem 0rem 1.6rem 2rem;
+}
+
+table th:first-child {
+    border-top-left-radius: 1.5rem;
+}
+
+table th:last-child {
+    border-top-right-radius: 1.5rem;
+}
+
+table tr:nth-child(even) {
+    background: var(--fc-even);
+}
+
+table tr:nth-child(odd) {
+    background: var(--fc-odd);
+}
+
+table td.user {
+    padding: 2rem;
+    text-align: left;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+td {
+    border-top: 1px solid var(--fc-button);
+}
+
+td.user a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+td.user span {
+    color: #bebebe;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tabela {
+    border: 2px solid var(--fc-button);
+    border-radius: 1.5rem;
+}
+
+tr td button {
+    color: red;
+    border: none;
+    background: none;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nothing {
+    max-width: 1120px;
+    height: 60rem;
+
+    color: #4E5455;
+    background-color: var(--fc-even);
+
+    align-items: center;
+
+    padding: 25rem;
+    gap: 6rem;
+
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.nothing img {
+    width: 14rem;
+    height: 14rem;
+}
